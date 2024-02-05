@@ -3,28 +3,32 @@ name: React App Deployment # name of the workflo
 on:
   push:
     branches:
-      - deploy-react-app # branch name
-
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   deploy-react-to-gh-pages:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       CI: false
 
     steps:
       # checkout the repository content to github runner
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # setup nodejs environment
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          node-version: "18.16.1"
+          node-version: 'lts/*'
 
       # cache the dependencies to speed up the build
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}

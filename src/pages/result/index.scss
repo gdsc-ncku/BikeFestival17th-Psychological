@@ -1,0 +1,95 @@
+#result {
+    height: calc(100% - 6rem - 5vh) !important;
+    .shareRatio {
+        position: absolute;
+        --height: min(89vh - 6rem, (94vw - 4rem) * 16 / 9);
+        --width: min(94vw - 4rem, (89vh - 6rem) * 9 / 16);
+        width: var(--width);
+        height: var(--height);
+        font-size: calc(var(--width) / 22);
+        .resultContent {
+            margin: 1.25em 0.5em 2em 0.5em;
+            --content-height: calc(100% - 3.25em);
+            height: var(--content-height);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            > div {
+                flex: 1;
+                display: flex;
+                line-height: 1.3em;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.5em;
+                > * {
+                    flex: 1;
+                }
+                .nameBox {
+                    text-align: left;
+                    .name {
+                        font-size: 2.25em;
+                        line-height: 1.3em;
+                    }
+                    .tags div {
+                        font-size: min(1em, calc(1em * 10 / var(--font-num)));
+                    }
+                }
+                > img {
+                    height: 7em;
+                    padding: 0.5em;
+                    object-fit: contain;
+                }
+                >div:has(svg) {
+                    overflow: hidden;
+                    object-fit: cover;
+                    svg {
+                        margin-top: 0.8em;
+                        height: 7.5em;
+                        width: 7.5em;
+                    }
+                }
+            }
+            > div:nth-child(3) {
+                line-height: 1.25em;
+                min-height: 7.5em;
+            }
+            .resultContext {
+                text-align: left;
+            }
+        }
+        .head,
+        .foot {
+            position: absolute;
+            font-size: 0.7em;
+            line-height: 1.1em;
+            color: #333a;
+        }
+        .head::before,
+        .foot::before,
+        .head::after,
+        .foot::after {
+            content: "";
+            position: absolute;
+            height: 0.16em;
+            width: 100vw;
+            top: calc(50% - 0.08em);
+            background-color: #333a;
+        }
+        .head::before,
+        .foot::before {
+            right: calc(100% + 0.6em);
+        }
+        .head::after,
+        .foot::after {
+            left: calc(100% + 0.6em);
+        }
+        .head {
+            top: 0.25em;
+            left: 4em;
+        }
+        .foot {
+            bottom: 0.25em;
+            right: 4em;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+#app {
+    position: relative;
+    height: 94vh;
+    width: 100vw;
+    padding: 3vh 0;
+    overflow: hidden;
+    .content {
+        position: relative;
+        height: calc(94vh - 4rem);
+        width: calc(94vw - 4rem);
+        max-width: 100vh;
+        margin: auto;
+        padding: 2rem;
+        background-color: #2226;
+        text-align: center;
+        border-radius: 2rem;
+        color: #fff;
+        overflow: hidden;
+        .logo {
+            height: 5vh;
+        }
+        .page {
+            position: absolute;
+            top: calc(3.5rem + 5vh);
+            width: calc(100% - 4rem); // 94vh - 8rem
+            height: calc(100% - (11rem + 5vh)); // 94vw - 15rem - 5vh
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: space-evenly;
+            align-items: center;
+            transition-property: opacity, transform;
+            transition-duration: 0.8s;
+            .title {
+                font-size: 3.5rem;
+            }
+            .subtitle {
+                font-size: 2.25rem;
+            }
+            .context {
+                font-size: min(2.7rem, calc(80vw / var(--ctx-width, 1)));
+                white-space: pre;
+            }
+            button {
+                outline: none;
+                border: none;
+                font-size: min(max(2rem, 3.2vh), 6vw);
+                padding: 0.5em min(2em, calc(40vw - calc(var(--width, 4) * 0.5em + 2em)));
+                width: calc(var(--width, 4) * 1em + 4em);
+                max-width: 80vw;
+                line-height: 1.5em;
+                height: calc(var(--height, 1) * 1.5em + 1em);
+                color: #fff;
+                background-color: #ff7b1a;
+                box-shadow: 0.1em 0.1em 0.2em -0.1em #000;
+                border-radius: 100vmax;
+                white-space: pre;
+                cursor: pointer;
+                transition-property: transform, box-shadow;
+                transition-duration: 0.3s;
+            }
+            button:hover {
+                transform: translateY(-0.1em);
+            }
+            button:active {
+                transform: translateY(0.1em);
+                box-shadow: 0em 0em 0em 0em #000;
+            }
+        }
+        .page[data-show="true"] {
+            opacity: 100%;
+            transform: translateY(0);
+        }
+        .page[data-show="false"] {
+            opacity: 0%;
+            transform: translateY(-5rem);
+            pointer-events: none;
+        }
+        .process {
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            height: 1.5rem;
+            width: 100%;
+            background-color: #fff;
+            border-style: double none;
+            border-width: 0.6rem;
+            border-color: #231f20;
+            isolation: isolate;
+            transition: opacity 2s;
+            img {
+                position: absolute;
+                left: calc(10% + 10% * var(--process) - 2.5rem);
+                bottom: calc(100% + 0.6rem);
+                width: 5rem;
+                transition: left 1s;
+            }
+            svg {
+                position: absolute;
+                top: calc(50% - 0.2rem);
+                left: 0;
+                width: 100%;
+                height: 0.4rem;
+                line {
+                    stroke: #fff;
+                    stroke-width: 0.4rem;
+                    stroke-dasharray: 30, 40;
+                    stroke-dashoffset: 0;
+                    animation: road 1.5s linear infinite;
+                }
+            }
+        }
+        .process::before {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #231f20;
+        }
+        .process[data-show="true"] {
+            opacity: 100%;
+        }
+        .process[data-show="false"] {
+            opacity: 0%;
+        }
+    }
+}
+
+#app::after {
+    content: "";
+    position: absolute;
+    --w: 142vmax;
+    height: var(--w);
+    width: var(--w);
+    top: calc(50vh - var(--w) / 2);
+    left: calc(50vw - var(--w) / 2);
+    z-index: -1;
+    // 極度耗能
+    // animation: rotate 30s linear infinite;
+    background: linear-gradient(45deg, #ff7b1a 0%, #faf8c8 65%, #95c4e6 100%);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes road {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 70;
+    }
+}

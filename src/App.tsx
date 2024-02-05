@@ -23,7 +23,7 @@ export default function App(): ReactElement {
   return (
     <div id="app">
       <div className="content">
-        <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} className="logo" />
+        <img alt="logo" src={`${process.env.PUBLIC_URL}/img/logo.svg`} className="logo" />
         <StartPage start={() => { setResponse([]) }} show={response === undefined} />
         {
           pageContent.map((data, i) => <QuestionPage
@@ -43,6 +43,7 @@ export default function App(): ReactElement {
           data-show={response !== undefined && response.length < 8}
         >
           <img
+            alt="process-icon"
             src={`${process.env.PUBLIC_URL}/img/bike-ico.svg`}
             style={{
               "--process": response?.length

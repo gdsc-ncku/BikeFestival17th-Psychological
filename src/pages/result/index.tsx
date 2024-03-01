@@ -42,8 +42,8 @@ export default function ResultPage(props: propsType): ReactElement | null {
     resultKey += response[2] << 1;
     resultKey += response[7] << 0;
 
-    // const result = resultArray[resultKey];
-    const result = resultArray[0];
+    const result = resultArray[resultKey];
+    // const result = resultArray[0];
     const svgPathList = Array.from(Array(6)).map((_, i) => {
         const res = `M${vec.map(v => {
             return `${(50 + v[0] * (1 + i) / 6.5).toFixed(2)} ${(50 + v[1] * (1 + i) / 6.5).toFixed(2)}`

@@ -14,7 +14,8 @@ import pageContent from "./data/content";
 import "./App.scss";
 
 export default function App(): ReactElement {
-  const [response, setResponse] = useState<Array<0 | 1> | undefined>();
+  // const [response, setResponse] = useState<Array<0 | 1> | undefined>();
+  const [response, setResponse] = useState<Array<0 | 1> | undefined>([0, 0, 0, 0, 0, 0, 0, 0]);
 
   useEffect(() => {
     console.log(response)

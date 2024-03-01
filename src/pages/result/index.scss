@@ -40,21 +40,111 @@
                     object-fit: contain;
                 }
                 >div:has(svg) {
-                    overflow: hidden;
                     object-fit: cover;
+                    position: relative;
                     svg {
                         margin-top: 0.8em;
                         height: 7.5em;
                         width: 7.5em;
                     }
+                    .traits {
+                        font-size: 0.85rem;
+                        position: absolute;
+                        top: -0.15rem;
+                        left: 0.5rem;
+                        height: calc(100% + 1rem);
+                        width: calc(100% - 1rem);
+                        .text {
+                            position: absolute;
+                            width: calc(1em * var(--length));
+                            text-align: center;
+                            font-size: calc(1em - 0.15em * min(1, max(0, var(--length) - 4)));
+                        }
+                        .text:nth-child(1) {
+                            top: 0;
+                            left: calc(50% - 0.5em * var(--length));
+                        }
+                        .text:nth-child(2) {
+                            top: 23%;
+                            right: calc(1.15rem - 0.5em * var(--length));
+                        }
+                        .text:nth-child(3) {
+                            bottom: 0;
+                            right: calc(20% - 0.5em * var(--length));
+                        }
+                        .text:nth-child(4) {
+                            bottom: 0;
+                            left: calc(20% - 0.5em * var(--length));
+                        }
+                        .text:nth-child(5) {
+                            top: 23%;
+                            left: calc(1.15rem - 0.5em * var(--length));
+                        }
+                    }
+                }
+                .skillBox {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    text-align: left;
+                    > div {
+                        position: relative;
+                        isolation: isolate;
+                        left: -0.5rem;
+                        .name {
+                            padding: 0.3em 0.5em;
+                            border-radius: 0.5em;
+                            width: fit-content;
+                            border: 0.1em solid #ff7b1a;
+                            background-color: #ff7b1a40;
+                        }
+                        .box {
+                            position: relative;
+                            font-size: 0.85em;
+                            padding: 0.6em 0.4em;
+                            top: -0.5rem;
+                            left: 0.6em;
+                            white-space: pre;
+                            z-index: -1;
+                            background-color: #ff7b1a40;
+                            border-radius: 0.5rem;
+                        }
+                    }
                 }
             }
             > div:nth-child(3) {
+                flex: 1;
                 line-height: 1.25em;
-                min-height: 7.5em;
+                // min-height: 7.5em;
             }
             .resultContext {
                 text-align: left;
+            }
+            .friends {
+                > div {
+                    flex: 1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    border: 0.1em solid #ff7b1a;
+                    // background-color: #ff7b1a40;
+                    border-radius: 1rem;
+                    .box {
+                        display: flex;
+                        > div {
+                            flex: 1;
+                            p {
+                                margin: 0.25em 0;
+                            }
+                            img {
+                                object-fit: contain;
+                                height: 4em;
+                            }
+                        }
+                    }
+                }
             }
         }
         .head,

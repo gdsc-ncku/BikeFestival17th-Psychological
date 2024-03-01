@@ -6,6 +6,7 @@ interface Result {
     context: string,
     good: [number, number],
     bad: [number, number],
+    recommand: string
 }
 
 const resultDict: {
@@ -34,7 +35,8 @@ const resultDict: {
         "bad": [
             0b1010,
             0b1011
-        ]
+        ],
+        "recommand": "人生岔路口、\nwhat matters most工作坊"
     },
     0b0011: {
         "name": "超速車車",
@@ -59,7 +61,8 @@ const resultDict: {
         "bad": [
             0b1101,
             0b1111
-        ]
+        ],
+        "recommand": "校園論壇、沉浸式體驗"
     },
     0b0000: {
         "name": "救護車車",
@@ -84,7 +87,8 @@ const resultDict: {
         "bad": [
             0b1110,
             0b1010
-        ]
+        ],
+        "recommand": "沉浸式體驗、升學指南"
     },
     0b1100: {
         "name": "拉風車車",
@@ -109,7 +113,8 @@ const resultDict: {
         "bad": [
             0b1001,
             0b0110
-        ]
+        ],
+        "recommand": "沉浸式體驗、深入科系"
     },
     0b1110: {
         "name": "故事車車",
@@ -134,7 +139,8 @@ const resultDict: {
         "bad": [
             0b0000,
             0b0001
-        ]
+        ],
+        "recommand": "人生岔路口、\nwhat matters most工作坊"
     },
     0b0100: {
         "name": "瘋子車車",
@@ -159,7 +165,8 @@ const resultDict: {
         "bad": [
             0b1011,
             0b1000
-        ]
+        ],
+        "recommand": "沉浸式體驗、校園論壇"
     },
     0b1010: {
         "name": "害羞車車",
@@ -184,7 +191,8 @@ const resultDict: {
         "bad": [
             0b0010,
             0b0000
-        ]
+        ],
+        "recommand": "升學指南、解憂茶軒"
     },
     0b0111: {
         "name": "超級機車",
@@ -209,7 +217,8 @@ const resultDict: {
         "bad": [
             0b1101,
             0b1000
-        ]
+        ],
+        "recommand": "解憂茶軒、科系帳篷"
     },
     0b0001: {
         "name": "勝利車車",
@@ -234,7 +243,8 @@ const resultDict: {
         "bad": [
             0b1110,
             0b0110
-        ]
+        ],
+        "recommand": "沈浸式體驗、解憂茶軒"
     },
     0b1011: {
         "name": "幽靈車車",
@@ -259,7 +269,8 @@ const resultDict: {
         "bad": [
             0b0010,
             0b0100
-        ]
+        ],
+        "recommand": "沈浸式體驗、解憂茶軒"
     },
     0b1101: {
         "name": "氣質車車",
@@ -284,7 +295,8 @@ const resultDict: {
         "bad": [
             0b0011,
             0b0111
-        ]
+        ],
+        "recommand": "科系體驗坊、人生岔路口"
     },
     0b1111: {
         "name": "娃娃車車",
@@ -309,7 +321,8 @@ const resultDict: {
         "bad": [
             0b0011,
             0b0101
-        ]
+        ],
+        "recommand": "人生岔路口、科系帳篷"
     },
     0b0101: {
         "name": "越野車車",
@@ -334,7 +347,8 @@ const resultDict: {
         "bad": [
             0b1111,
             0b1001
-        ]
+        ],
+        "recommand": "沈浸式體驗、人生岔路口"
     },
     0b1001: {
         "name": "老人車車",
@@ -359,7 +373,8 @@ const resultDict: {
         "bad": [
             0b1100,
             0b0101
-        ]
+        ],
+        "recommand": "解憂茶軒、科系帳篷"
     },
     0b1000: {
         "name": "文青車車",
@@ -384,7 +399,8 @@ const resultDict: {
         "bad": [
             0b0100,
             0b0111
-        ]
+        ],
+        "recommand": "大學藍圖、解憂茶軒"
     },
     0b0110: {
         "name": "吃貨車車",
@@ -409,7 +425,8 @@ const resultDict: {
         "bad": [
             0b1100,
             0b0001
-        ]
+        ],
+        "recommand": "沈浸式體驗、能量加值站"
     }
 };
 

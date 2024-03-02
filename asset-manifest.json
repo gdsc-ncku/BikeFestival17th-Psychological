@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/BikeFestival17th-Psychological/static/css/main.b2297e20.css",
-    "main.js": "/BikeFestival17th-Psychological/static/js/main.9576fa0b.js",
+    "main.css": "/BikeFestival17th-Psychological/static/css/main.b8d95b08.css",
+    "main.js": "/BikeFestival17th-Psychological/static/js/main.d5c13ab3.js",
     "index.html": "/BikeFestival17th-Psychological/index.html",
-    "main.b2297e20.css.map": "/BikeFestival17th-Psychological/static/css/main.b2297e20.css.map",
-    "main.9576fa0b.js.map": "/BikeFestival17th-Psychological/static/js/main.9576fa0b.js.map"
+    "main.b8d95b08.css.map": "/BikeFestival17th-Psychological/static/css/main.b8d95b08.css.map",
+    "main.d5c13ab3.js.map": "/BikeFestival17th-Psychological/static/js/main.d5c13ab3.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2297e20.css",
-    "static/js/main.9576fa0b.js"
+    "static/css/main.b8d95b08.css",
+    "static/js/main.d5c13ab3.js"
   ]
 }

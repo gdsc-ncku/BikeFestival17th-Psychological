@@ -5,7 +5,7 @@ import {
   useState,
 } from "react";
 
-import StartPage from "./pages/start";
+import StartPage from "./pages/start/StartPage";
 import QuestionPage from "./pages/question";
 import ResultPage from "./pages/result";
 

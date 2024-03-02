@@ -11,7 +11,7 @@
         max-width: 100vh;
         margin: auto;
         padding: 2rem;
-        background-color: #2226;
+        background-color: #2224;
         text-align: center;
         border-radius: 2rem;
         color: #fff;
@@ -33,14 +33,26 @@
             transition-property: opacity, transform;
             transition-duration: 0.8s;
             .title {
-                font-size: 3.5rem;
+                font-size: 3rem;
+                color: #7d7d7d;
             }
             .subtitle {
-                font-size: 2.25rem;
+                padding: 0.5em 1.5em;
+                font-size: 1.8rem;
+                color: #7d7d7d;
+                background-color: #ecf0d966;
+                border-radius: 2rem;
+                border: 0.1rem solid #7d7d7d;
+                width: calc(min(100%, 50vh) - 3em);
             }
             .context {
-                font-size: min(2.7rem, calc(80vw / var(--ctx-width, 1)));
+                font-size: min(1.8rem, 70vw / calc(var(--ctx-width, 1)));
                 white-space: pre;
+                padding: 2.5rem;
+                color: #7d7d7d;
+                background-color: #ecf0d966;
+                border-radius: 2rem;
+                border: 0.1rem solid #7d7d7d;
             }
             button {
                 outline: none;
@@ -51,9 +63,13 @@
                 max-width: 80vw;
                 line-height: 1.5em;
                 height: calc(var(--height, 1) * 1.5em + 1em);
-                color: #fff;
-                background-color: #ff7b1a;
+                color: #cc5a3d;
+                // color: #fff;
+                // background-color: #ff7b1a;
+                background-color: #efddc5ca;
                 box-shadow: 0.1em 0.1em 0.2em -0.1em #000;
+                border: 0.2rem solid #cc5a3d;
+                font-style: italic;
                 border-radius: 100vmax;
                 white-space: pre;
                 cursor: pointer;
@@ -66,6 +82,15 @@
             button:active {
                 transform: translateY(0.1em);
                 box-shadow: 0em 0em 0em 0em #000;
+            }
+        }
+        .page:nth-of-type(1) {
+            button {
+                width: 100%;
+                max-width: calc(50vh);
+            }
+            .foot {
+                font-size: 1.5rem;
             }
         }
         .page[data-show="true"] {
@@ -141,7 +166,7 @@
     z-index: -1;
     // 極度耗能
     // animation: rotate 30s linear infinite;
-    background: linear-gradient(45deg, #ff7b1a 0%, #faf8c8 65%, #95c4e6 100%);
+    background: linear-gradient(-45deg, #ff7b1a 0%, #faf8c8 65%, #95c4e6 100%);
 }
 
 @keyframes rotate {

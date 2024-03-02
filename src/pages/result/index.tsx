@@ -60,6 +60,7 @@ export default function ResultPage(props: propsType): ReactElement | null {
     return (
         <div id="result" className="page" data-show={showState}>
             <div className="shareRatio">
+                <img src={`${process.env.PUBLIC_URL}/cars/${result.name}.png`} />
                 <div className="head">NCKUBIKE 17TH</div>
                 <div className="resultContent">
                     <div>

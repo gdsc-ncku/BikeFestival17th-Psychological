@@ -7,11 +7,19 @@
         width: var(--width);
         height: var(--height);
         font-size: calc(var(--width) / 22);
+        > * {
+            display: none;
+        }
+        > img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
         .resultContent {
             margin: 1.25em 0.5em 2em 0.5em;
             --content-height: calc(100% - 3.25em);
             height: var(--content-height);
-            display: flex;
+            // display: flex;
             flex-direction: column;
             gap: 0.5em;
             > div {

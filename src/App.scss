@@ -11,7 +11,7 @@
         max-width: 100vh;
         margin: auto;
         padding: 2rem;
-        background-color: #2224;
+        // background-color: #2220;
         text-align: center;
         border-radius: 2rem;
         color: #fff;
@@ -166,7 +166,7 @@
     z-index: -1;
     // 極度耗能
     // animation: rotate 30s linear infinite;
-    background: linear-gradient(-45deg, #ff7b1a 0%, #faf8c8 65%, #95c4e6 100%);
+    background: linear-gradient(-45deg, #c45b21 15%, #faf8c8 55%, #95c4e6 90%);
 }
 
 @keyframes rotate {

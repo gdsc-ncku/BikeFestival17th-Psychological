@@ -6,7 +6,7 @@ import {
 } from "react";
 
 import resultArray from "../../data/result";
-
+import animated_bicycle from "../../asset/animated_bicycle.gif";
 import "./index.scss"
 
 type propsType = Readonly<{
@@ -58,6 +58,11 @@ export default function ResultPage(props: propsType): ReactElement | null {
     const pathD = `M${traitsVec.join(" L")}Z`
 
     return (
+        <>
+        <div className="loading">
+            <img src={animated_bicycle} alt="animated_bicycle" />
+            <p>結果計算中......請耐心稍等🙏</p>
+        </div>
         <div id="result" className="page" data-show={showState}>
             <div className="shareRatio">
                 <img src={`${process.env.PUBLIC_URL}/cars/${result.name}.png`} />
@@ -145,5 +150,6 @@ export default function ResultPage(props: propsType): ReactElement | null {
                 <div className="foot">歡迎將本張圖片分享至限時動態<br />並標註 @nckubike_festival</div>
             </div>
         </div>
+        </>
     );
 }

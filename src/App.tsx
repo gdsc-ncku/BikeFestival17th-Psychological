@@ -5,7 +5,7 @@ import {
   useState,
 } from "react";
 
-import StartPage from "./pages/start";
+import StartPage from "./pages/start/StartPage";
 import QuestionPage from "./pages/question";
 import ResultPage from "./pages/result";
 
@@ -15,6 +15,7 @@ import "./App.scss";
 
 export default function App(): ReactElement {
   const [response, setResponse] = useState<Array<0 | 1> | undefined>();
+  // const [response, setResponse] = useState<Array<0 | 1> | undefined>([0, 0, 0, 0, 0, 0, 0, 0]);
 
   useEffect(() => {
     console.log(response)
